@@ -1,0 +1,36 @@
+{
+  "name": "Offline Test",
+  "short_name": "Offline Test",
+  "start_url": "/index.html",
+  "theme_color": "#669933",
+  "background_color": "#669933",
+  "display": "standalone",
+  "scope": "/",
+  "icons": [
+    {
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+    },
+    {
+      "src": "homework-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "homework-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "homework-64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "homework-48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+  ]
+}
