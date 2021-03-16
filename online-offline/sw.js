@@ -48,14 +48,14 @@ self.addEventListener('activate', function(event) {
 //We can intercept request for those files from the network and respond with the files from the cache
 // INTERCEPTANDO LAS PETICIONES
 self.addEventListener('fetch', event => {
-  // console.log('Evento fetch por: ', event.request.url);
+  console.log('Evento fetch por: ', event.request.url);
   event.respondWith(
     // Busca la petición en cualquier resultado almacenado en caché
     caches.match(event.request) 
     //ESTATICO (almacenar en caché solicitudes nuevas de forma acumulativa)
      .then(response => {
         if(response){
-          // console.log('Encontrado', event.request.url, 'en cache');
+          console.log('Encontrado', event.request.url, 'en cache');
           return response;
         }
 

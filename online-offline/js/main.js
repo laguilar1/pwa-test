@@ -23,21 +23,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
   console.log("DOM fully loaded and parsed:");
   
   var offlineNotification = document.getElementById('offline');
+  var onlineNotification = document.getElementById('online');
   
   // Alert offline
   function showIndicator() {
-    offlineNotification.innerHTML = 'You are currently offline.';
-
-    offlineNotification.classList.remove('alert-info');
-    offlineNotification.classList.add('alert-warning');
+    offlineNotification.style.display='block';
+    onlineNotification.style.display='none';
+    // offlineNotification.innerHTML = ` You are currently offline.`;
+    // offlineNotification.classList.remove('alert-info');
+    // offlineNotification.classList.add('alert-warning');
     console.log('Tu es tas offline')
   }
   
   // Alerte online
   function hideIndicator() {
-      offlineNotification.innerHTML = 'You are online.';
-      offlineNotification.classList.remove('alert-warning');
-      offlineNotification.classList.add('alert-info');  
+      offlineNotification.style.display='none';
+      onlineNotification.style.display='block';  
+      //offlineNotification.innerHTML = 'You are online.';
+      // offlineNotification.classList.remove('alert-warning');
+      // offlineNotification.classList.add('alert-info');  
       console.log('Tu es tas online')  
   }
   
