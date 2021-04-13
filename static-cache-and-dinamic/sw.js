@@ -25,25 +25,24 @@ self.addEventListener('install', event => {
 
 //We can intercept request for those files from the network and respond with the files from the cache
 self.addEventListener('fetch', event => {
-  // console.log('Evento fetch por: ', event.request.url);
+  
   event.respondWith(
     caches.match(event.request)
       
     //ESTATICO
      .then(response => {
         if(response){
-          // console.log('ResponseOk: ',response.ok);
+
           console.log('Encontrado', event.request.url, 'en cache');
           return response.clone();
         }
-        // console.log ('Petición a internet', event.request.url);
         return fetch(event.request)
 
 
       })
       .then(response => {
 
-        // console.log('Response....',response);
+
         let hasImg= event.request.url.includes('/img/');
         
         if(hasImg){
