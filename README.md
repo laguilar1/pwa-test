@@ -7,4 +7,4 @@ Para correr el proyecto
 - Dentro de la carpeta del proyecto que quieras probar correr el comando: 
     http-server -o
 - Crea un servidor de páginas estaticas:
-    http://localhost:8080
+    http://localhost:8080   
